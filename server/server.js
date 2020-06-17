@@ -10,6 +10,9 @@ mongoose.connect('mongodb+srv://admin:admin@grimgames-7mfso.mongodb.net/chatandr
     console.log('mongodb connected!', err)
 })
 
+var user = mongoose.user('User', {
+
+})
 var Message = mongoose.model('Message', {
     name: String,
     message: String
