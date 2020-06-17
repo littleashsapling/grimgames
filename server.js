@@ -5,7 +5,7 @@ const http = require('http')
 var bodyParser = require('body-parser')
     //static folder
 const app = express()
-const server = http.createserver(app)
+const server = http.createServer(app)
 app.use(express.static(path.join(__dirname, 'front')))
     //database
 const mongoose = require('mongoose')
