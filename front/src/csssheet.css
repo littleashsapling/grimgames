@@ -3,6 +3,7 @@
 body {
     background: #212121;
     color: #fff;
+    overflow: hidden;
 }
 
 form {
@@ -13,7 +14,7 @@ form {
 
 input,
 button {
-    margin: 10px;
+    margin: 5px;
 }
 
 .userlabel,
@@ -45,6 +46,32 @@ h2 {
 
 
 /*userscreen*/
+
+#chatContainer {
+    background-color: #3b3b3b;
+    border-radius: 5px;
+    width: 25%;
+    height: 50%;
+    position: fixed;
+    display: inline-flex;
+    bottom: 5px;
+    left: 5px;
+    padding: 10px;
+}
+
+#userContainer {
+    position: fixed;
+    bottom: 0px;
+    left: 5px;
+}
+
+#messageView {
+    position: absolute;
+    bottom: 45px;
+    max-height: 250px;
+    overflow-y: scroll;
+    width: 90%;
+}
 
 
 /*fancy text header*/
