@@ -1,273 +1,285 @@
-@import url(http://fonts.googleapis.com/css?family=Play);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-body {
-    background: #212121;
-    color: #fff;
-    overflow: hidden;
-}
-
-form {
-    margin: 0 auto;
-    width: 30vw;
-    font-family: 'Oswald';
-}
-
-input,
-button {
-    margin: 5px;
-}
-
-.userlabel,
-small {
-    padding-left: 15px;
-}
-
-.form-check {
-    padding-left: 35px;
-}
-
-#button {
-    text-align: center;
-}
-
-#roomLabel {
-    text-align-last: center;
-    margin: 0px auto;
-}
-
-
-/*account creation*/
-
-h2 {
-    text-align: center;
-    font-family: 'Play';
-    margin: 50px 30px 70px;
-}
-
-
-/*userscreen*/
-
-#chatContainer {
-    background-color: #3b3b3b;
-    border-radius: 5px;
-    width: 25%;
-    height: 50%;
-    position: fixed;
-    display: inline-flex;
-    bottom: 5px;
-    left: 5px;
-    padding: 10px;
-}
-
-#userContainer {
-    position: fixed;
-    bottom: 0px;
-    left: 5px;
-}
-
-#messageView {
-    position: absolute;
-    bottom: 45px;
-    max-height: 250px;
-    overflow-y: scroll;
-    width: 90%;
-}
-
-
-/*fancy text header*/
-
-#container {
-    width: 70vw;
-    margin: 15vw;
-}
-
-h1 {
-    text-align: center;
-    font-size: 5em;
-    letter-spacing: 8px;
-    font-family: 'Play';
-    font-weight: 400;
-    /*Create overlap*/
-    margin: 0;
-    line-height: 0;
-    /*Animation*/
-    animation: glitch1 2.5s infinite;
-}
-
-h1:nth-child(2) {
-    color: #67f3da;
-    animation: glitch2 2.5s infinite;
-}
-
-h1:nth-child(3) {
-    color: #f16f6f;
-    animation: glitch3 2.5s infinite;
-}
-
-
-/*Keyframes*/
-
-@keyframes glitch1 {
-    0% {
-        transform: none;
-        opacity: 1;
+    @import url(http://fonts.googleapis.com/css?family=Play);
+    @import url(http://fonts.googleapis.com/css?family=Oswald);
+    body {
+        background: #212121;
+        color: #fff;
     }
-    7% {
-        transform: skew(-0.5deg, -0.9deg);
-        opacity: 0.75;
+    
+    .size {
+        margin: 0 auto;
+        width: 30vw;
+        font-family: 'Oswald';
     }
-    10% {
-        transform: none;
-        opacity: 1;
+    
+    #moveTop {
+        margin-top: -6%;
     }
-    27% {
-        transform: none;
-        opacity: 1;
+    
+    .userlabel,
+    small {
+        padding-left: 15px;
     }
-    30% {
-        transform: skew(0.8deg, -0.1deg);
-        opacity: 0.75;
+    
+    .form-check {
+        padding-left: 35px;
     }
-    35% {
-        transform: none;
-        opacity: 1;
+    
+    #button {
+        text-align: center;
     }
-    52% {
-        transform: none;
-        opacity: 1;
+    
+    #roomLabel {
+        text-align-last: center;
+        margin: 0px auto;
     }
-    55% {
-        transform: skew(-1deg, 0.2deg);
-        opacity: 0.75;
+    /*account creation*/
+    
+    h2 {
+        text-align: center;
+        font-family: 'Play';
+        margin: 50px 30px 70px;
     }
-    50% {
-        transform: none;
-        opacity: 1;
+    /*userscreen*/
+    
+    #chatContainer {
+        background-color: #3b3b3b;
+        border-radius: 5px;
+        width: 20%;
+        height: 50%;
+        position: fixed;
+        display: inline-flex;
+        bottom: 5px;
+        left: 5px;
+        padding: 10px;
     }
-    72% {
-        transform: none;
-        opacity: 1;
+    
+    #userContainer {
+        position: fixed;
+        bottom: 10px;
+        width: 80%;
+        display: flex;
     }
-    75% {
-        transform: skew(0.4deg, 1deg);
-        opacity: 0.75;
+    
+    #userContainer input[type='text'] {
+        height: 40px;
+        background-color: #3b3b3b;
     }
-    80% {
-        transform: none;
-        opacity: 1;
+    
+    #messageView {
+        position: absolute;
+        bottom: 55px;
+        max-height: 250px;
+        overflow-y: hidden;
+        width: 90%;
     }
-    100% {
-        transform: none;
-        opacity: 1;
+    
+    ul {
+        text-align: right;
     }
-}
-
-@keyframes glitch2 {
-    0% {
-        transform: none;
-        opacity: 0.25;
+    
+    #video {
+        position: relative;
+        margin-top: 5%;
+        left: 30%;
     }
-    7% {
-        transform: translate(-2px, -3px);
-        opacity: 0.5;
+    
+    #audio {
+        position: fixed;
+        left: 40%;
+        bottom: 0;
     }
-    10% {
-        transform: none;
-        opacity: 0.25;
+    /*fancy text header*/
+    
+    #container {
+        width: 70vw;
+        margin: 15vw;
     }
-    27% {
-        transform: none;
-        opacity: 0.25;
+    
+    h1 {
+        text-align: center;
+        font-size: 5em;
+        letter-spacing: 8px;
+        font-family: 'Play';
+        font-weight: 400;
+        /*Create overlap*/
+        margin: 0;
+        line-height: 0;
+        /*Animation*/
+        animation: glitch1 2.5s infinite;
     }
-    30% {
-        transform: translate(-5px, -2px);
-        opacity: 0.5;
+    
+    h1:nth-child(2) {
+        color: #67f3da;
+        animation: glitch2 2.5s infinite;
     }
-    35% {
-        transform: none;
-        opacity: 0.25;
+    
+    h1:nth-child(3) {
+        color: #f16f6f;
+        animation: glitch3 2.5s infinite;
     }
-    52% {
-        transform: none;
-        opacity: 0.25;
+    /*Keyframes*/
+    
+    @keyframes glitch1 {
+        0% {
+            transform: none;
+            opacity: 1;
+        }
+        7% {
+            transform: skew(-0.5deg, -0.9deg);
+            opacity: 0.75;
+        }
+        10% {
+            transform: none;
+            opacity: 1;
+        }
+        27% {
+            transform: none;
+            opacity: 1;
+        }
+        30% {
+            transform: skew(0.8deg, -0.1deg);
+            opacity: 0.75;
+        }
+        35% {
+            transform: none;
+            opacity: 1;
+        }
+        52% {
+            transform: none;
+            opacity: 1;
+        }
+        55% {
+            transform: skew(-1deg, 0.2deg);
+            opacity: 0.75;
+        }
+        50% {
+            transform: none;
+            opacity: 1;
+        }
+        72% {
+            transform: none;
+            opacity: 1;
+        }
+        75% {
+            transform: skew(0.4deg, 1deg);
+            opacity: 0.75;
+        }
+        80% {
+            transform: none;
+            opacity: 1;
+        }
+        100% {
+            transform: none;
+            opacity: 1;
+        }
     }
-    55% {
-        transform: translate(-5px, -1px);
-        opacity: 0.5;
+    
+    @keyframes glitch2 {
+        0% {
+            transform: none;
+            opacity: 0.25;
+        }
+        7% {
+            transform: translate(-2px, -3px);
+            opacity: 0.5;
+        }
+        10% {
+            transform: none;
+            opacity: 0.25;
+        }
+        27% {
+            transform: none;
+            opacity: 0.25;
+        }
+        30% {
+            transform: translate(-5px, -2px);
+            opacity: 0.5;
+        }
+        35% {
+            transform: none;
+            opacity: 0.25;
+        }
+        52% {
+            transform: none;
+            opacity: 0.25;
+        }
+        55% {
+            transform: translate(-5px, -1px);
+            opacity: 0.5;
+        }
+        50% {
+            transform: none;
+            opacity: 0.25;
+        }
+        72% {
+            transform: none;
+            opacity: 0.25;
+        }
+        75% {
+            transform: translate(-2px, -6px);
+            opacity: 0.5;
+        }
+        80% {
+            transform: none;
+            opacity: 0.25;
+        }
+        100% {
+            transform: none;
+            opacity: 0.25;
+        }
     }
-    50% {
-        transform: none;
-        opacity: 0.25;
+    
+    @keyframes glitch3 {
+        0% {
+            transform: none;
+            opacity: 0.25;
+        }
+        7% {
+            transform: translate(2px, 3px);
+            opacity: 0.5;
+        }
+        10% {
+            transform: none;
+            opacity: 0.25;
+        }
+        27% {
+            transform: none;
+            opacity: 0.25;
+        }
+        30% {
+            transform: translate(5px, 2px);
+            opacity: 0.5;
+        }
+        35% {
+            transform: none;
+            opacity: 0.25;
+        }
+        52% {
+            transform: none;
+            opacity: 0.25;
+        }
+        55% {
+            transform: translate(5px, 1px);
+            opacity: 0.5;
+        }
+        50% {
+            transform: none;
+            opacity: 0.25;
+        }
+        72% {
+            transform: none;
+            opacity: 0.25;
+        }
+        75% {
+            transform: translate(2px, 6px);
+            opacity: 0.5;
+        }
+        80% {
+            transform: none;
+            opacity: 0.25;
+        }
+        100% {
+            transform: none;
+            opacity: 0.25;
+        }
     }
-    72% {
-        transform: none;
-        opacity: 0.25;
-    }
-    75% {
-        transform: translate(-2px, -6px);
-        opacity: 0.5;
-    }
-    80% {
-        transform: none;
-        opacity: 0.25;
-    }
-    100% {
-        transform: none;
-        opacity: 0.25;
-    }
-}
-
-@keyframes glitch3 {
-    0% {
-        transform: none;
-        opacity: 0.25;
-    }
-    7% {
-        transform: translate(2px, 3px);
-        opacity: 0.5;
-    }
-    10% {
-        transform: none;
-        opacity: 0.25;
-    }
-    27% {
-        transform: none;
-        opacity: 0.25;
-    }
-    30% {
-        transform: translate(5px, 2px);
-        opacity: 0.5;
-    }
-    35% {
-        transform: none;
-        opacity: 0.25;
-    }
-    52% {
-        transform: none;
-        opacity: 0.25;
-    }
-    55% {
-        transform: translate(5px, 1px);
-        opacity: 0.5;
-    }
-    50% {
-        transform: none;
-        opacity: 0.25;
-    }
-    72% {
-        transform: none;
-        opacity: 0.25;
-    }
-    75% {
-        transform: translate(2px, 6px);
-        opacity: 0.5;
-    }
-    80% {
-        transform: none;
-        opacity: 0.25;
-    }
-    100% {
-        transform: none;
-        opacity: 0.25;
-    }
-}

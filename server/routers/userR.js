@@ -18,7 +18,7 @@ let Users = {}
 //signup
 router.post(
     '/signup',
-    async(req, res) => {
+    async (req, res) => {
         try {
             var username = req.body.username
             var email = req.body.email
@@ -40,14 +40,14 @@ router.post(
 //login
 router.post(
     '/login',
-    function(req, res) {
+    function (req, res) {
         var email = req.body.email;
         var password = req.body.password;
         if (email.length > 0 && password.length > 0) {
             user.findOne({
                 email: email,
                 password: password
-            }, function(err, user) {
+            }, function (err, user) {
                 if (err) {
 
                 } else {
@@ -56,14 +56,11 @@ router.post(
                 }
             })
         } else {
-            res.json({
-                status: 0,
-                msg: 'Invalid Fields'
-            });
+            res.send('Sorry, wrong login info')
         }
     })
 
-module.exports = function(UserList) {
+module.exports = function (UserList) {
     Users = UserList
     return router
 }

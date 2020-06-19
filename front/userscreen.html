@@ -9,9 +9,17 @@
 </head>
 
 <body>
-    <nav>
-
+    <nav class='navbar navbar-dark bg-dark'>
+        <a class="navbar-brand" href="#">GrimGames - Coming soon</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href='index.html'>Log Out</a>
+            </li>
+        </ul>
     </nav>
+    <div id='video'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9VDvgL58h_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div id='chatContainer'>
         <div id='messageView'></div>
         <div>
@@ -19,6 +27,12 @@
                 <input type='text' id='messageInput'>
                 <button type='submit' id='sendButton' class='btn btn-secondary'>Send</button>
             </form>
+        </div>
+
+        <div id='audio'>
+            <audio autoplay controls>
+                <source src="./src/kepler.mp3" type="audio/mpeg" />
+            </audio>
         </div>
 
     </div>
