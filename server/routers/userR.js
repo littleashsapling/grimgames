@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db')
 const user = require('../models/userM')
+const {
+    request
+} = require('express')
 
 
 /**
@@ -9,6 +12,8 @@ const user = require('../models/userM')
  * @param - /signup
  * @description - User SignUp
  */
+
+let Users = {}
 
 //signup
 router.post(
@@ -26,6 +31,7 @@ router.post(
             }
 
             new user(data).save()
+            res.redirect('/index.html')
         } catch (error) {
             console.log('Error while uploading file...Try again later.')
         }
@@ -43,29 +49,21 @@ router.post(
                 password: password
             }, function(err, user) {
                 if (err) {
-                    res.json({
-                        status: 0,
-                        message: err
-                    });
+
+                } else {
+                    req.session.username = user.username
+                    res.redirect('/userscreen.html')
                 }
-                if (!user) {
-                    res.json({
-                        status: 0,
-                        msg: "not found"
-                    });
-                }
-                res.json({
-                    status: 1,
-                    id: user._id,
-                    message: " success"
-                });
             })
         } else {
             res.json({
                 status: 0,
-                msg: "Invalid Fields"
+                msg: 'Invalid Fields'
             });
         }
     })
 
-module.exports = router
+module.exports = function(UserList) {
+    Users = UserList
+    return router
+}
