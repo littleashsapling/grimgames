@@ -34,7 +34,6 @@ io.on('connection', socket => {
         socket.broadcast.emit('userConnected', uname)
     })
     socket.on('sendMessage', message => {
-        console.log(message)
         socket.broadcast.emit('chatMessage', {
             message: message,
             uname: users[socket.id]
